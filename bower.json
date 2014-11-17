@@ -1,0 +1,21 @@
+{
+  "name": "ProjectSwdev1",
+  "version": "0.0.0",
+  "authors": [
+    "mlmng <sany_sky@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/lib"
+  ],
+  "main": "index.js",
+  "homepage": "https://github.com/mlmng/ProjectSwdev",
+  "dependencies": {
+    "angular": "~1.3.2"
+  }
+}
