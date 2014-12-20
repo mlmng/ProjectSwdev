@@ -1,10 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="myApp">
 <head>
-	<title>Hello</title>
-	<script type="text/javascript" scr="lib/angular/angular.js" ></script>
-	<script scr="js/app.js"></script>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ระบบตรวจสอบเวลาเรียนของนักศึกษา</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stylish.css">
 </head>
-<body>
-
+<body ng-controller="mainCtrl">
+	<div class="panel panel-primary">
+  		<div class="panel-heading"><font face = "JasmineUPC" size = "+8">ระบบตรวจสอบเวลาเรียนของนักศึกษา</font></div>
+  		<div class="panel-body">
+    		<table style = "weidth:100%" align = "center">
+			<center><font face = "JasmineUPC"size = "+3" color = "red">ยินดีต้อนรับเข้าสู่ระบบตรวจสอบเวลาเรียนของนักศึกษา</font></center>
+			<tr>
+				<td>
+					<div class = "figure">
+	  					<p><img src="./img/Students-icon.png" class="img-thumbnail" width="220" height="200" alt="Eiffel tower">
+	  					<p>
+	  				</div>
+	  			</td>
+	  			<td>
+	  				<div class = "figure">
+		  				<p><img src="./img/Teacher-icon.png" class="img-thumbnail" width="220" height="200" alt="Eiffel tower">
+		  				<p>
+		  			</div>
+	  			</td>
+  			</tr>
+  			<tr>
+  				<td align = "center">
+  					<button type="button" class="btn btn-primary" onclick="location.href='student.html' ">STUDENT</button>
+  				</td>
+  				<td align = "center">
+  					<button type="button" class="btn btn-primary" onclick="location.href='teacher.html' ">TEACHER</button>
+  				</td>
+  			</tr>
+  		</table>
+  		</div>
+	</div>
 </body>
 </html>

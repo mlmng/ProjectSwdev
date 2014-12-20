@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>สำหรับนักศึกษา</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stylish.css">
+</head>
+<body ng-controller="mainCtrl">
+	<div class="panel panel-primary">
+  		<div class="panel-heading"><font face = "JasmineUPC" size = "+8">ระบบตรวจสอบเวลาเรียนของนักศึกษา</font></div>
+  		<div class="panel-body">
+  			<label><a href = "index.html">Home</a>>Student</label><br>
+  			<font face = "JasmineUPC"size = "+3" color = "red">นักศึกษา</font>
+			<table id = "t01" align = "center">
+				<tr>
+					<td width="5">รหัสนักศึกษา</td>
+					<td>
+						<input type="text" class="form-control" placeholder="Search">
+					</td>
+				</tr>
+				<tr>
+					<td width="5">ชื่อนักศึกษา</td>
+					<td>
+						<input type="text" class="form-control" placeholder="Search">
+					</td>
+				</tr>
+				<tr>
+					<td width="5">นามสกุลนักศึกษา</td>
+					<td>
+						<input type="text" class="form-control" placeholder="Search">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<br><button type="submit" class="btn btn-primary btn-sm">Search</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
