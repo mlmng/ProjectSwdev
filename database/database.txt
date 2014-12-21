@@ -1,0 +1,51 @@
+use Project
+db.dropDatabase()
+
+use Project
+
+
+db.student.insert ([
+	{ FName: 'Marina', LName: 'Cardia', StdID: 5410110444, RFID: 50020014560 } ,
+	{ FName: 'Jessica', LName: 'Lolian', StdID: 5410110209, RFID: 50034310060 } ,
+	{ FName: 'Jusmine', LName: 'Smith', StdID: 5410110110, RFID: 50443021109 } ,
+	{ FName: 'John', LName: 'Bovia', StdID: 5410110543, RFID: 51220977605 }
+]);
+
+
+db.rrobot.insert ([
+	{ SName: 'Engineering Materials' , SID: 235-230 , Section: 01 , Day: 'Monday' , Time : 09.00-09.50 } ,
+	{ SName: 'Engineering Materials' , SID: 235-230 , Section: 02 , Day: 'Monday' , Time : 11.00-11.50 } ,
+	{ SName: 'Intro to engineering' , SID: 200-101 , Section: 01 , Day: 'Tuesday' , Time : 09.00-09.50 } ,
+	{ SName: 'Engineering Materials' , SID: 235-230 , Section: 01 , Day: 'Wednesday' , Time : 09.00-09.50 } ,
+	{ SName: 'Intro to engineering' , SID: 200-101 , Section: 02 , Day: 'Wednesday' , Time : 10.00-10.50 },	
+	{ SName: 'Engineering Materials' , SID: 235-230 , Section: 02 , Day: 'Wednesday' , Time : 11.00-11.50 } ,
+	{ SName: 'Engineering Materials' , SID: 235-230 , Section: 01 , Day: 'Friday' , Time : 09.00-09.50 } ,
+	{ SName: 'Engineering Materials' , SID: 235-230 , Section: 02 , Day: 'Friday' , Time : 11.00-11.50 }
+]);
+
+
+db.r200.insert ([
+	{ SName: 'Introduction to Computer Programming' , SID: 242-101 , Section: 01 , Day: 'Monday' , Time : 10.00-10.50 } ,
+	{ SName: 'Electric Circuit' , SID: 242-205 , Section: 02 , Day: 'Monday' , Time : 11.00-11.50 } ,
+	{ SName: 'Intro to engineering' , SID: 200-101 , Section: 02 , Day: 'Tuesday' , Time : 09.00-09.50 } ,
+	{ SName: 'Introduction to Computer Programming' , SID: 242-101 , Section: 01 , Day: 'Tuesday' , Time : 11.00-11.50 } ,
+	{ SName: 'Electric Circuit' , SID: 242-205 , Section: 01 , Day: 'Wednesday' , Time : 13.00-13.50 } ,	
+	{ SName: 'Database Systems' , SID: 242-305 , Section: 02 , Day: 'Thusday' , Time : 11.00-11.50 } ,
+	{ SName: 'Database Systems' , SID: 242-305 , Section: 01 , Day: 'Thusday' , Time : 12.00-12.50 } ,
+	{ SName: 'Wireless Communication' , SID: 242-306 , Section: 02 , Day: 'Friday' , Time : 11.00-11.50 }
+]);
+
+
+db.r201.insert ([
+	{ SName: 'Programming Fundamental I' , SID: 242-207 , Section: 01 , Day: 'Monday' , Time : 12.00-12.50 } ,
+	{ SName: 'Electric Circuit' , SID: 242-205 , Section: 01 , Day: 'Monday' , Time : 13.00-13.50 } ,
+	{ SName: 'Wireless Communication' , SID: 242-306 , Section: 01 , Day: 'Tuesday' , Time : 09.00-09.50 } ,
+	{ SName: 'Introduction to Computer Programming' , SID: 242-101 , Section: 03 , Day: 'Tuesday' , Time : 12.00-12.50 } ,
+	{ SName: 'Programming Fundamental I' , SID: 242-207 , Section: 02 , Day: 'Wednesday' , Time : 13.00-13.50 } ,	
+	{ SName: 'Programming Fundamental I' , SID: 242-305 , Section: 01 , Day: 'Thusday' , Time : 12.00-12.50 } ,
+	{ SName: 'Database Systems' , SID: 242-306 , Section: 02 , Day: 'Friday' , Time : 09.00-09.50 }
+]);
+
+
+
+
