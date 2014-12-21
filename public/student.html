@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="myApp" lang="en">
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,20 @@
 	<title>สำหรับนักศึกษา</title>
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/stylish.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script> <!-- calendar -->
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+	  $(function() {
+	    $( "#datepicker" ).datepicker();
+	  });
+  	</script>
+
 </head>
 <body ng-controller="mainCtrl">
 	<div class="panel panel-primary">
@@ -34,10 +48,57 @@
 					</td>
 				</tr>
 				<tr>
+					<td width="5">วันที่</td>
+					<td>
+						<input type="text" class="form-control" placeholder="Search" id="datepicker">
+					</td>
+				</tr>
+				<tr height ="35">
+					<td width="5">เวลา</td>
+					<td>
+						<!-- start dropdown -->
+						<select class="selectpicker">
+							<option>--เลือก--</option>
+						    <option>08:00</option>
+						    <option>09:00</option>
+						    <option>10:00</option>
+						    <option>11:00</option>
+						    <option>12:00</option>
+						    <option>13:00</option>
+						    <option>14:00</option>
+						    <option>15:00</option>
+						    <option>16:00</option>
+						    <option>17:00</option>
+						</select>
+						
+						<!-- end dropdown -->
+						&nbsp;ถึง &nbsp;	
+						<!-- start dropdown 2 -->
+						 
+						 <select class="selectpicker">
+						 	<option>--เลือก--</option>
+						    <option>08:50</option>
+						    <option>09:50</option>
+						    <option>10:50</option>
+						    <option>11:50</option>
+						    <option>12:50</option>
+						    <option>13:50</option>
+						    <option>14:50</option>
+						    <option>15:50</option>
+						    <option>16:50</option>
+						    <option>17:50</option>
+						 </select>
+						
+						<!-- end dropdown 2-->
+	
+					</td>	
+				</tr>
+				<tr>
 					<td colspan="2" align="center">
 						<br><button type="submit" class="btn btn-primary btn-sm">Search</button>
 					</td>
 				</tr>
+				
 			</table>
 		</div>
 	</div>
@@ -46,5 +107,7 @@
         		<p class="text-muted" align="center">© DUMBO-TEAM Project</p>
       		</div>
       	</div>
+
 </body>
+
 </html>
