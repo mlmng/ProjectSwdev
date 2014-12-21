@@ -14,10 +14,11 @@ div.figure p {
 img.scaled {
   width: 100%;
 }
-table, th, td {
+table#t02, th, td {
     border: 1px solid white;
     width: 45%
 }
 table#t01,tr,td{
     border: 1px solid white;
+    width: 45%
 }
