@@ -6,16 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>สำหรับอาจารย์</title>
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/stylish.css">
+	<!--<link rel="stylesheet" type="text/css" href="css/stylish.css">-->
 </head>
 <body ng-controller="mainCtrl">
 	<div class="panel panel-primary">
   		<div class="panel-heading"><font face = "JasmineUPC" size = "+8">ระบบตรวจสอบเวลาเรียนของนักศึกษา</font></div>
   		<div class="panel-body">
   			<label><a href = "index.html">Home</a>>Teacher</label><br>
-  			<font face = "JasmineUPC"size = "+3" color = "red">อาจารย์</font>
-			
+  			<font face = "JasmineUPC"size = "+3" color = "red">อาจารย์</font>	
+		</div>
+		<div>
+			<button type="button" class="btn btn-primary">Room R200</button>
+			<button type="button" class="btn btn-primary">Room R201</button>
+			<button type="button" class="btn btn-primary">Room R301-2</button>
+			<div class="table-responsive" border = "10px">
+				<table class="table table-bordered">
+					<thead>
+						<tr class="info">
+							<th>Days</th>
+							<th>08:00 - 08:50</th>
+							<th>09:00 - 09:50</th>
+							<th>10:00 - 10:50</th>
+							<th>11:00 - 11:50</th>
+							<th>12:00 - 12:50</th>
+							<th>13:00 - 13:50</th>
+							<th>14:00 - 14:50</th>
+							<th>15:00 - 15:50</th>
+							<th>16:00 - 16:50</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="book in books">
+							<td>Monday</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr ng-repeat="book in books">
+							<td>Tuesday</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr ng-repeat="book in books">
+							<td>Wednesday</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr ng-repeat="book in books">
+							<td>Thursday</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr ng-repeat="book in books">
+							<td>Friday</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
+		<div id="footer">
+      		<div class="container">
+        		<p class="text-muted" align="center">© DUMBO-TEAM Project</p>
+      		</div>
+      	</div>
 </body>
 </html>
