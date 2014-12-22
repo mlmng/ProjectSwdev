@@ -16,6 +16,8 @@ public class RfidApp{
 		View view = new View(controller);
 		view.show();
 		controller.begin();
+		
+		System.out.println(controller.getRfid());
     }
     
 }

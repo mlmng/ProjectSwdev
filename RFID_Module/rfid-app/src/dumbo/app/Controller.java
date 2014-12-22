@@ -89,7 +89,7 @@ public class Controller implements RFIDListener {
 			public void run() {
 				rfid = id;
 				isLoading = true; 
-				try {
+				//try {
 //					picsPanel.takeSnap(rfid);
 //					while(picsPanel.getNameReady()){
 //						System.out.println("bin");
@@ -102,23 +102,25 @@ public class Controller implements RFIDListener {
 //					namePic = picsPanel.getNamePic();
 					
 					//int tmp2 = connectweb.checkRFID(id);
-					responseObj = postfile.SendFile(namePic);
-					isLoading = false;
-					System.out.print(responseObj.toString());
-				} catch (ClientProtocolException e) {
+					//responseObj = postfile.SendFile(namePic);
+//					isLoading = false;
+					//System.out.print(responseObj.toString());
+//				} catch (ClientProtocolException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
-				} catch (IOException e) {
+//					e.printStackTrace();
+//				} catch (IOException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				System.out.println("App(" + count++ + "): " + id);
-//				try {
-//					Thread.sleep(2000);
-//				} catch (Exception e) {
+//					e.printStackTrace();
 //				}
+				
+				System.out.println("App(" + count++ + "): " + id);
+			try {
+					Thread.sleep(2000);
+				} catch (Exception e) {
+				}
 			}
 		});
+			
 	}
 	public String getMessage(){
 		if(responseObj == null)

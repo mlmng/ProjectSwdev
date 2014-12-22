@@ -44,7 +44,7 @@ public class PostFile {
 
 	public JSONObject SendFile(String fileName) throws ClientProtocolException,IOException {
 		HttpClient httpclient = HttpClientBuilder.create().build();
-		HttpPost httppost = new HttpPost(urlPostPic);
+		 HttpPost httppost = new HttpPost(urlPostPic);
 		// String picPath = picsPath + fileName;
 		// String picPath = "pics/";
 		//File  file = new File(picPath);
