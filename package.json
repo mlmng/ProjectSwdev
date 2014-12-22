@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.10.2"
+    "body-parser": "^1.9.2",
+    "date-format": "0.0.2",
+    "express": "^4.10.2",
+    "mongojs": "^0.17.0",
+    "socket.io": "^1.2.1"
   }
 }
