@@ -5,10 +5,11 @@ use Project
 
 
 db.student.insert ([
-	{ FName: 'Marina', LName: 'Cardia', StdID: 5410110444, RFID: 50020014560 } ,
-	{ FName: 'Jessica', LName: 'Lolian', StdID: 5410110209, RFID: 50034310060 } ,
-	{ FName: 'Jusmine', LName: 'Smith', StdID: 5410110110, RFID: 50443021109 } ,
-	{ FName: 'John', LName: 'Bovia', StdID: 5410110543, RFID: 51220977605 }
+	{ FName: 'Sakinah', LName: 'Maelemang', StdID: 5410110119, RFID: 6C0095E9C3D3 } ,
+	{ FName: 'Nattapong', LName: 'Kongtong', StdID: 5410110265, RFID: 6C0095E9CEDE } ,
+	{ FName: 'Thunyarat', LName: 'Buatong', StdID: 5410110223, RFID: 6C0095E9CDDD } ,
+	{ FName: 'Husen', LName: 'Mali', StdID: 5410110667, RFID: 6C0095E9B7A7 },
+	{ FName: 'Thanatcha', LName: 'Sae-ao', StdID: 5410110210, RFID: 6C0095E99383 }
 ]);
 
 
