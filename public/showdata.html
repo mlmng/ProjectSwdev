@@ -1,8 +1,36 @@
-<html>
+<!DOCTYPE html>
+<html ng-app="myApp">
 <head>
-	<title></title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>สำหรับอาจารย์</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/stylish.css">
 </head>
-<body>
-
+<body ng-controller="teacherCtrl">
+	<div class="panel panel-primary">
+  		<div class="panel-heading"><font face = "JasmineUPC" size = "+8">ระบบตรวจสอบเวลาเรียนของนักศึกษา</font></div>
+  		<div class="panel-body">
+  			<label><a href = "index.html" >Home</a></label><br>
+  			<font face = "JasmineUPC"size = "+5" color = "red">แสดงข้อมูลการเข้าเรียน</font>	
+		</div>
+		<table class="table table-bordered" style="width:100%" >
+				    <td>{{student.StdID}}</td>
+				    <td>{{student.FName}}</td>
+				    <td>{{student.LName}}</td>
+				    <td>{{subject.SName}}</td>
+				    <td>{{subject.sid}}</td>
+				    <td>{{subject.sec}}</td>
+				    <td>{{subject.room}}</td>
+				    <td>{{subject.day}}</td>
+				  </tr>
+				</table>
+	</div>
+		<div id="footer">
+      		<div class="container">
+        		<p class="text-muted" align="center">© DUMBO-TEAM Project</p>
+      		</div>
+      	</div>
 </body>
 </html>
