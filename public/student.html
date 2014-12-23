@@ -100,7 +100,7 @@
    			<div id="t02" style="display:none">
 				<table id = "t01" style="width:100%" >
 				  <tr ng-repeat="student in studentInstance">
-				    <td>{{student.StdID}}</td>
+				    <td><a href="showdata.html" ng-click="searchdata" >{{student.StdID}}</a></td>
 				    <td>{{student.FName}}</td>
 				    <td>{{student.LName}}</td>
 				  </tr>
