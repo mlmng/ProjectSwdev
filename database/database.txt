@@ -17,13 +17,13 @@ db.student.insert ([
 
 
 db.room.insert([
-	{ SName : 'Software Develop Method' , sid : 242-320, sec : 01 , room : 'R200' , day: 'Monday', strTime : '09:00', endTime : '09:50'} ,
-	{ SName : 'Software Develop Method' , sid : 242-320, sec : 02 , room : 'R201' , day: 'Wendesday', strTime : '11:00', endTime : '11:50'} ,
-	{ SName : 'Intro to Computer Programming' , sid : 242-101, sec : 01 , room : 'R200' , day: 'Wednesday', strTime : '11:00', endTime : '11:50'} ,
-	{ SName : 'Intro to Computer Programming' , sid : 242-101, sec : 02 , room : 'R301' , day: 'Thusday', strTime : '10:00', endTime : '10:50'} ,
-	{ SName : 'Electric Circuits' , sid : 242-205, sec : 01 , room : 'R200' , day: 'Thusday', strTime : '09:00', endTime : '09:50'} ,
-	{ SName : 'Electric Circuits' , sid : 242-205, sec : 02 , room : 'R201' , day: 'Friday', strTime : '10:00', endTime : '11:50'} ,
-	{ SName : 'Database Systems' , sid : 242-305, sec : 01 , room : 'R301' , day: 'Tueday', strTime : '09:00', endTime : '09:50'} ,
-	{ SName : 'Database Systems' , sid : 242-305, sec : 02 , room : 'R201' , day: 'Monday', strTime : '09:00', endTime : '09:50'}
+	{ SName : 'Software Develop Method' , sid : '242-320', sec : '01' , room : 'R200' , day: 'Monday', strTime : '09:00', endTime : '09:50'} ,
+	{ SName : 'Software Develop Method' , sid : '242-320', sec : '02' , room : 'R201' , day: 'Wendesday', strTime : '11:00', endTime : '11:50'} ,
+	{ SName : 'Intro to Computer Programming' , sid : '242-101', sec : '01' , room : 'R200' , day: 'Wednesday', strTime : '11:00', endTime : '11:50'} ,
+	{ SName : 'Intro to Computer Programming' , sid : '242-101', sec : '02' , room : 'R301' , day: 'Thusday', strTime : '10:00', endTime : '10:50'} ,
+	{ SName : 'Electric Circuits' , sid : '242-205', sec : '01' , room : 'R200' , day: 'Thusday', strTime : '09:00', endTime : '09:50'} ,
+	{ SName : 'Electric Circuits' , sid : '242-205', sec : '02' , room : 'R201' , day: 'Friday', strTime : '10:00', endTime : '11:50'} ,
+	{ SName : 'Database Systems' , sid : '242-305', sec : '01' , room : 'R301' , day: 'Tueday', strTime : '09:00', endTime : '09:50'} ,
+	{ SName : 'Database Systems' , sid : '242-305', sec : '02' , room : 'R201' , day: 'Monday', strTime : '09:00', endTime : '09:50'}
 
 ]);
