@@ -1,5 +1,5 @@
 package dumbo.app;
 
 public interface Listener {
-//	public PicsPanel modelChanged();
+	public String modelChanged();
 }
