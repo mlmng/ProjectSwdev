@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
 	<!--<link rel="stylesheet" type="text/css" href="css/stylish.css">-->
 </head>
-<body ng-controller="mainCtrl">
+<body ng-controller="teacherCtrl">
 	<div class="panel panel-primary">
   		<div class="panel-heading"><font face = "JasmineUPC" size = "+8">ระบบตรวจสอบเวลาเรียนของนักศึกษา</font></div>
   		<div class="panel-body">
@@ -36,7 +36,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr ng-repeat="book in books">
+						<tr ng-repeat="subjectr200 in subjects">
 							<td>Monday</td>
 							<td></td>
 							<td></td>
@@ -48,7 +48,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr ng-repeat="book in books">
+						<tr ng-repeat="subjectr200 in subjects">
 							<td>Tuesday</td>
 							<td></td>
 							<td></td>
@@ -60,7 +60,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr ng-repeat="book in books">
+						<tr ng-repeat="subjectr200 in subjects">
 							<td>Wednesday</td>
 							<td></td>
 							<td></td>
@@ -72,7 +72,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr ng-repeat="book in books">
+						<tr ng-repeat="subjectr200 in subjects">
 							<td>Thursday</td>
 							<td></td>
 							<td></td>
@@ -84,7 +84,7 @@
 							<td></td>
 							<td></td>
 						</tr>
-						<tr ng-repeat="book in books">
+						<tr ng-repeat="subjectr200 in subjects">
 							<td>Friday</td>
 							<td></td>
 							<td></td>
@@ -100,11 +100,39 @@
 				</table>
 			</div>
 		</div>
+		<div id="t01" style="display:none">
+			<table style="width:100%">
+			  <tr>
+			    <td>Jill</td>
+			    <td>Smith</td> 
+			    <td>50</td>
+			  </tr>
+			  <tr>
+			    <td>Eve</td>
+			    <td>Jackson</td> 
+			    <td>94</td>
+			  </tr>
+			</table>
+		</div>
 	</div>
 		<div id="footer">
       		<div class="container">
         		<p class="text-muted" align="center">© DUMBO-TEAM Project</p>
       		</div>
       	</div>
+    <script>
+		$(document).ready(function(){
+		  $("#show").click(function(){
+		    $("#t01").fadeIn();
+		    $("#t01").fadeIn("slow");
+		    $("#t01").fadeIn(3000);
+		  });
+		  $("#hide").click(function(){
+		    $("#t01").fadeOut();
+		    $("#t01").fadeOut("hide");
+		    $("#t01").fadeOut(3000);
+		  });
+		});
+	</script>
 </body>
 </html>
