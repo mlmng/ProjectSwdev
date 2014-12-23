@@ -4,17 +4,18 @@ var mongojs = require('mongojs')
 var format = require('date-format')
 var bodyParser = require('body-parser')
 var app = express()
-var db = mongojs('project', ['student', 'rfid']);
+var db = mongojs('project', ['student', 'rfid','room']);
 
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 app.post('/api/verify_rfid', function(req, res){
-	// console.log(req.body);
+	//console.log(req.body);
 	// console.log("======================");
 	// res.json(req.body);
 	var rfid_code = req.body.rfid;
+	var rfid_room = req.body.room;
 	db.student.findOne({
    		RFID: rfid_code
 	}, function(err, doc) {
@@ -22,7 +23,8 @@ app.post('/api/verify_rfid', function(req, res){
     // doc._id.toString() === '523209c4561c640000000001'
 	    db.rfid.insert({ 
 	    	datetime: format.asString(new Date()), 
-	    	student_id: doc._id 
+	    	student_id: doc._id ,
+	    	room : rfid_room
 	    }, function(err, doc1) {
 			res.json(
 				{ 
@@ -46,7 +48,14 @@ app.post('/api/student', function(req, res){
 		res.send(docs);
 	});
 });
-
+app.get('/api/room',function(req,res){
+	db.room.find({
+		room:'R200'
+	}, function(err,docs){
+		res.send(docs);
+	});
+	
+});
 var server = app.listen(3000, function () {
 
   	console.log("server is running")
