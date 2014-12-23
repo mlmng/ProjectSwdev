@@ -17,20 +17,19 @@ import org.json.simple.JSONObject;
 
 public class Controller implements RFIDListener {
 	private String rfid;
-	private String namePic;
+//	private String namePic;
 	private Listener listener;
 	private String comPort;
 	private RFIDController rfidController;
 	private ConnectWeb connectweb;
 //	private PicsPanel picsPanel;
 	private PostFile postfile;
-	private ExecutorService executorService = Executors
-			.newSingleThreadExecutor();
+	private ExecutorService executorService = Executors.newSingleThreadExecutor();
 	private int count;
 	private JSONObject responseObj;
 	private boolean isLoading = false;
 	private static Map<String, String> settings = new HashMap<String, String>();
-	
+	private JSONObject result;
 	public Controller() {
 		count = 0;
 		try {
@@ -60,7 +59,7 @@ public class Controller implements RFIDListener {
 			while (!rfidController.getClosed()) {
 				// System.out.println("idle!");
 				if (listener != null) {
-//					picsPanel = listener.modelChanged();
+					listener.modelChanged();
 				}
 			}
 
@@ -89,7 +88,7 @@ public class Controller implements RFIDListener {
 			public void run() {
 				rfid = id;
 				isLoading = true; 
-				//try {
+				try {
 //					picsPanel.takeSnap(rfid);
 //					while(picsPanel.getNameReady()){
 //						System.out.println("bin");
@@ -98,22 +97,22 @@ public class Controller implements RFIDListener {
 //						} catch (Exception e) {
 //						}
 //					}
-
+//
 //					namePic = picsPanel.getNamePic();
 					
-					//int tmp2 = connectweb.checkRFID(id);
-					//responseObj = postfile.SendFile(namePic);
-//					isLoading = false;
-					//System.out.print(responseObj.toString());
-//				} catch (ClientProtocolException e) {
+					result = connectweb.checkRFID(id);
+//					responseObj = postfile.SendFile(namePic);
+					isLoading = false;
+//					System.out.print(responseObj.toString());
+				} catch (ClientProtocolException e) {
 					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				} catch (IOException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
 					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
+					e.printStackTrace();
+				}
 				
-				System.out.println("App(" + count++ + "): " + id);
+				//System.out.println("App(" + count++ + "): " + id);
 			try {
 					Thread.sleep(2000);
 				} catch (Exception e) {
@@ -122,33 +121,28 @@ public class Controller implements RFIDListener {
 		});
 			
 	}
-	public String getMessage(){
-		if(responseObj == null)
+	public String getStdID(){
+		if(result == null)
 			return null;
 		else
-			if(responseObj.containsKey("message"))
-				return responseObj.get("message").toString();
-			else return "N/A";
+			return result.get("StdID").toString();
 	}
-	public String getName(){
-		if(responseObj == null)
+	public String getFName(){
+		if(result == null)
 			return null;
 		else
-			if(responseObj.containsKey("name"))
-				return responseObj.get("name").toString();
-			else return "N/A";
+			return result.get("FName").toString();
 	}
+	
 	public boolean getIsLoading(){
 		return isLoading;
 	}
-	public String getStatus(){
-		if(responseObj == null)
+	
+	public String getLName(){
+		if(result == null)
 			return null;
 		else{
-			if(responseObj.containsKey("status"))
-				return responseObj.get("status").toString();
-			else
-				return "N/A";
+			return result.get("LName").toString();
 		}	
 	}	
 }
