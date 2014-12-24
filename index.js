@@ -95,13 +95,18 @@ app.post('/api/student',function(req, res){
 });
 
 app.get('/api/room',function(req,res){
-	db.room.find({
-		room:'R200'
-	}, function(err,docs){
+	db.room.find({}, function(err,docs){
 		res.send(docs);
 	});
-	
 });
+// app.post('/api/room',function(req,res){
+// 	var Room_day = req.body.Dayroom
+// 	db.room.find({
+// 		room:Room_day
+// 	},function(err,doc){
+// 		res.json(doc);
+// 	});
+// });
 
 var server = app.listen(3000, function () {
   	console.log("server is running")

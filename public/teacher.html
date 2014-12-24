@@ -20,7 +20,7 @@
   			<font face = "JasmineUPC"size = "+3" color = "red">อาจารย์</font>	
 		</div>
 		<div>
-			<button type="button" class="btn btn-primary" ng-click="getSubject('R200')">Room R200</button>
+			<button type="button" class="btn btn-primary" ng-click="getSubject()">Room R200</button>
 			<button type="button" class="btn btn-primary">Room R201</button>
 			<button type="button" class="btn btn-primary">Room R301-2</button>
 			<div class="table-responsive" border = "10px">
@@ -40,9 +40,9 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr ng-init ="roomDay1=Monday">
 							<td>Monday</td>
-							<td ng-repeat="field in datas[0]"><a href="showdata.html" ng-click="searchdata" >{{field.sid}}</a></td>
+							<td ng-repeat="field in data"><a><!-- {{field.sid}} --></a></td>
 							
 							<!-- <td></td>
 							<td></td>
@@ -91,32 +91,41 @@
 						</tr>
 						<tr>
 							<td>Friday</td>
+							<td ng-repeat="field in datas[4]"><a href="showdata.html" ng-click="searchdata" >{{field.sid}}</a></td>
+							
+							<!-- <td></td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
 							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
+							<td></td> -->
 						</tr>
 					</tbody>
 				</table>
 			</div>
 		</div>
-		<div id="t01" style="display:none">
-			<table style="width:100%">
-			  <tr>
-			    <td>Jill</td>
-			    <td>Smith</td> 
-			    <td>50</td>
-			  </tr>
-			  <tr>
-			    <td>Eve</td>
-			    <td>Jackson</td> 
-			    <td>94</td>
-			  </tr>
+		<div>
+			<table class="table table-bordered">
+				<tr>
+					<td>Name</td>
+					<td>Sid</td>
+					<td>Day</td>
+					<td>Room</td>
+					<td>Sec</td>
+					<td>StrTime</td>
+					<td>EndTime</td>
+				</tr>
+				<tr ng-repeat="field in subjects">
+					<td>{{field.SName}}</td>
+					<td>{{field.sid}}</td>
+					<td>{{field.day}}</td>
+					<td>{{field.room}}</td>
+					<td>{{field.sec}}</td>
+					<td>{{field.strTime}}</td>
+					<td>{{field.endTime}}</td>
+				</tr>
 			</table>
 		</div>
 	</div>
