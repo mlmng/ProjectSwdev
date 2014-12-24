@@ -22,15 +22,26 @@ angular.module("myApp", [])
 .controller('studentCtrl', function($scope, $http){
 	$scope.getStudent = function() {
 
-		console.log($scope.stdId,$scope.fname,$scope.lname);
+		//console.log($scope.stdId,$scope.fname,$scope.lname);
 
 		// $http.get('/api/student').success(function(data){
 		// 	console.log(data);
-		// 	$scope.studentInstance = data.FName;
+		// 	$scope.studentInstances = data;
 		// })
-		 $http.post('/api/student',$scope).success(function(data){
-		 	$scope.studentInstance = data;
-		 });
+		// $scope.studentInstances = [];
+		// $http.post('/api/student', {StdID : $scope.stdId}).success(function(data){
+		// 	console.log(data);
+		// 	for (property in data){
+  // 				$scope.studentInstances.push(property); 
+		// 	}
+		// });
+		// console.log($scope.studentInstances);
+
+		$http.post('/api/student', {StdID : $scope.stdId,FName : $scope.fname,LName : $scope.lname,date : $scope.date,STime : $scope.starttime,ETime : $scope.endtime}).success(function(data){
+			console.log(data);
+    		$scope.studentInstances = data;
+    		console.log($scope.studentInstances);
+		});
 	}
 })
 .controller('teacherCtrl', function($scope, $http){

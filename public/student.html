@@ -8,8 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
 	<script src="lib/angular/angular.js"></script>
 	<script src="js/app.js"></script>
-	<script src="lib/socket.io-client/socket.io.js"></script>
-	<script src="js/angular-socket-io/socket.js"></script>
+<!-- 	// <script src="lib/socket.io-client/socket.io.js"></script>
+	// <script src="js/angular-socket-io/socket.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="css/stylish.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="lib/jquery/dist/jquery.min.js"></script>
@@ -49,60 +49,65 @@
 				<tr>
 					<td width="5">วันที่</td>
 					<td>
-						<input id="datepicker" ng-model="date" type="text" class="form-control" placeholder="Search">
+						<!-- <input id="datepicker" ng-model="date" type="text" class="form-control" placeholder="Search"> -->
+						<input type="date" ng-model="date" class="form-control" placeholder="Search">
 					</td>
 				</tr>
 				<tr height ="35">
 					<td width="5">เวลา</td>
 					<td>
 						<!-- start dropdown -->
-						<select class="selectpicker">
+						<select ng-model="starttime">
 							<option>--เลือก--</option>
-						    <option>08:00</option>
-						    <option>09:00</option>
-						    <option>10:00</option>
-						    <option>11:00</option>
-						    <option>12:00</option>
-						    <option>13:00</option>
-						    <option>14:00</option>
-						    <option>15:00</option>
-						    <option>16:00</option>
-						    <option>17:00</option>
+						    <option value = "08:00">08:00</option>
+						    <option value = "09:00">09:00</option>
+						    <option value = "10:00">10:00</option>
+						    <option value = "11:00">11:00</option>
+						    <option value = "12:00">12:00</option>
+						    <option value = "13:00">13:00</option>
+						    <option value = "14:00">14:00</option>
+						    <option value = "15:00">15:00</option>
+						    <option value = "16:00">16:00</option>
+						    <option value = "17:00">17:00</option>
 						</select>
 						
 						<!-- end dropdown -->
 						&nbsp;ถึง &nbsp;	
 						<!-- start dropdown 2 -->
 						 
-						 <select class="selectpicker">
+						 <select ng-model="endtime" >
 						 	<option>--เลือก--</option>
-						    <option>08:50</option>
-						    <option>09:50</option>
-						    <option>10:50</option>
-						    <option>11:50</option>
-						    <option>12:50</option>
-						    <option>13:50</option>
-						    <option>14:50</option>
-						    <option>15:50</option>
-						    <option>16:50</option>
-						    <option>17:50</option>
+						    <option value = "08:50">08:50</option>
+						    <option value = "09:50">09:50</option>
+						    <option value = "10:50">10:50</option>
+						    <option value = "11:50">11:50</option>
+						    <option value = "12:50">12:50</option>
+						    <option value = "13:50">13:50</option>
+						    <option value = "14:50">14:50</option>
+						    <option value = "15:50">15:50</option>
+						    <option value = "16:50">16:50</option>
+						    <option value = "17:50">17:50</option>
 						 </select>
 						<!-- end dropdown 2-->
 					</td>	
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
-						<br><button id ="show" ng-click="getStudent()" class="btn btn-primary btn-sm" >Search</button>
+						<br><button id ="show" ng-click="getStudent()" onclick = "clickShow()" class="btn btn-primary btn-sm" >Search</button>
 					</td>
 				</tr>
-				
 			</table>
-   			<div id="t02" style="display:none">
-				<table id = "t01" style="width:100%" >
-				  <tr ng-repeat="student in studentInstance">
-				    <td><a href="showdata.html" ng-click="searchdata" >{{student.StdID}}</a></td>
-				    <td>{{student.FName}}</td>
-				    <td>{{student.LName}}</td>
+   			<div id="t02" style ="display : none">
+				<table id = "t01" style="width:100%">
+				  <tr>
+				    <td>StudentID</td>
+				    <td>Name</td>
+				    <td>Surname</td>
+				  </tr>
+				  <tr ng-repeat="std in studentInstances">
+				    <td>{{std.StdID}}</td>
+				    <td>{{std.FName}}</td>
+				    <td>{{std.LName}}</td>
 				  </tr>
 				</table>
 			</div>	
@@ -119,13 +124,11 @@
 		  });
 	  	</script>
 		<script>
-			$(document).ready(function(){
-			  $("#show").click(function(){
-			    $("#t02").fadeIn();
-			    $("#t02").fadeIn("slow");
-			    $("#t02").fadeIn(3000);
-			  });
-			});
+			function clickShow(){
+				$("#t02").fadeIn();
+				$("#t02").fadeIn("slow");
+				$("#t02").fadeIn(3000);
+			} 
 		</script>
 </body>
 </html>
